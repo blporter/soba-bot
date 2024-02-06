@@ -1,5 +1,11 @@
 services:
   discord-bot:
-    image: soba-bot
+    image: mephalrith/soba-bot
     env_file:
       - dev.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - "linux/amd64"
+        - "linux/arm64"
